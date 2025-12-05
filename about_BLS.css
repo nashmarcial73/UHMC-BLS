@@ -412,3 +412,151 @@ section, header, .mission-box, .individual-box {
   margin-bottom: 10px;
   color: #014f6e;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== MOBILE RESPONSIVE DESIGN ========== */
+@media (max-width: 900px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 20px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    border-radius: 14px;
+    gap: 18px;
+    text-align: right;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    font-size: 2.2rem;
+  }
+
+  /* HERO TITLE */
+  .button-label {
+    position: static;
+    margin-top: 70px;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .hero-section {
+    height: 38vh;
+    padding: 20px;
+  }
+
+  /* MISSION SECTION */
+  .mission-section {
+    padding: 60px 20px;
+  }
+
+  .mission-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .mission-box {
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+  }
+
+  /* MEET THE TEAM TITLE */
+  .meet-title {
+    font-size: 28px;
+    padding-top: 40px;
+  }
+
+  /* INDIVIDUAL SECTION */
+  .individual-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .individual-box {
+    width: 100%;
+    padding: 25px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  }
+
+  .individual-box img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  /* FOOTER SECTION */
+  .bottom-section {
+    padding: 0 20px 40px;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .bottom-box {
+    width: 100%;
+    padding: 25px;
+  }
+}
+
+/* ========== SMALLER PHONES ========== */
+@media (max-width: 500px) {
+  .button-label {
+    font-size: 2.2rem;
+  }
+
+  .logo {
+    width: 85px;
+  }
+
+  .logo-label {
+    font-size: 1rem;
+  }
+
+  .logo-label2 {
+    font-size: 1.1rem;
+  }
+
+  .individual-box img {
+    width: 130px;
+  }
+}

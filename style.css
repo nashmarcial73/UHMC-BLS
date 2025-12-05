@@ -419,3 +419,100 @@ section, header {
   margin-bottom: 10px;
   color: #014f6e;
 }
+
+
+
+
+
+
+
+
+
+
+/* ========== MOBILE RESPONSIVE DESIGN ========== */
+@media (max-width: 900px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 20px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    flex-direction: column;
+    background: rgba(0,0,0,0.75);
+    padding: 20px;
+    border-radius: 12px;
+    gap: 15px;
+    text-align: right;
+    animation: fadeInMenu 0.3s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* HERO SECTION */
+  .hero-section {
+    height: 70vh;
+    padding: 0 20px;
+  }
+
+  .button-label {
+    position: static;
+    margin-top: 40px;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+
+  .join-btn {
+    position: static;
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 25px;
+    font-size: 1rem;
+  }
+
+  /* INTRO SECTION */
+  #introduction {
+    margin: 20px;
+    padding: 25px !important;
+  }
+
+  .motivation {
+    font-size: 2rem;
+  }
+
+  /* ANNOUNCEMENTS */
+  .announcements {
+    margin: 20px;
+    padding: 25px;
+  }
+
+  /* BOTTOM SECTION */
+  .bottom-container {
+    flex-direction: column;
+    width: 90%;
+    gap: 20px;
+  }
+
+  .bottom-box {
+    min-width: 100%;
+    padding: 25px;
+  }
+
+}

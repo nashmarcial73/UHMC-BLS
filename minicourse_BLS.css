@@ -294,3 +294,159 @@ section, header, .lesson-box {
     margin-bottom: 15px;
   }
 }
+
+
+
+
+
+
+
+
+/* ============================
+   MOBILE RESPONSIVE DESIGN
+   ============================ */
+@media (max-width: 900px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 20px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    border-radius: 14px;
+    gap: 18px;
+    text-align: right;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    color: white;
+    margin-left: auto;
+    font-size: 2.3rem;
+  }
+
+  /* HERO TITLE */
+  .button-label {
+    position: static;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 2.8rem;
+  }
+
+  .hero-section {
+    height: 35vh;
+    padding: 20px;
+  }
+
+  /* LESSON SECTION (TOP) */
+  .lesson-section {
+    padding: 60px 20px;
+  }
+
+  .lesson-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+  }
+
+  .lesson-box {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .lesson-image {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  /* LESSON 2 SECTION */
+  .lesson-step {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+
+  .lesson2-section {
+    padding: 40px 20px 80px;
+  }
+
+  /* PROGRESS BAR */
+  .progress-bar {
+    width: 100%;
+  }
+
+  /* FOOTER (BOTTOM SECTION) */
+  .bottom-section {
+    padding: 40px 20px;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .bottom-box {
+    width: 100%;
+    padding: 25px;
+  }
+}
+
+/* ============================
+   SMALL PHONES (500px)
+   ============================ */
+@media (max-width: 500px) {
+
+  .button-label {
+    font-size: 2.2rem;
+  }
+
+  .logo {
+    width: 85px;
+  }
+
+  .logo-label {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  .logo-label2 {
+    font-size: 1.1rem;
+  }
+
+  .lesson-step p {
+    font-size: 1rem;
+  }
+
+  .lesson2-section p {
+    padding: 20px;
+    font-size: 1rem;
+  }
+}
+

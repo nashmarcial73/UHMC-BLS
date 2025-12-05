@@ -202,3 +202,122 @@ p {
   from { opacity: 0; transform: translateY(25px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+
+
+
+
+
+
+
+/* ============================
+   MOBILE RESPONSIVE DESIGN
+   ============================ */
+@media (max-width: 900px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    width: 220px;
+    flex-direction: column;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    border-radius: 14px;
+    gap: 18px;
+    text-align: right;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2.3rem;
+    color: white;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  /* HERO TITLE */
+  .button-label {
+    position: static;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+
+  .hero-section {
+    height: 35vh;
+    padding: 20px;
+  }
+
+  /* CLEANUP SECTION */
+  .cleanup-section {
+    padding: 50px 15px;
+  }
+
+  .cleanup-box {
+    width: 100%;
+    padding: 25px;
+  }
+
+  /* FOOTER */
+  .bottom-section {
+    padding: 40px 15px;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .bottom-box {
+    width: 100%;
+    padding: 25px;
+  }
+}
+
+/* ============================
+   SMALL PHONES (max-width 500px)
+   ============================ */
+@media (max-width: 500px) {
+
+  .button-label {
+    font-size: 2rem;
+  }
+
+  .logo {
+    width: 85px;
+  }
+
+  .logo-label {
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  .logo-label2 {
+    font-size: 1.1rem;
+  }
+
+  h1, h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
