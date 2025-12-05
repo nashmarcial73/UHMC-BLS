@@ -1,6 +1,4 @@
-/* -------------------------
-   GLOBAL BASE
--------------------------- */
+
 body {
   margin: 0;
   padding: 0;
@@ -8,6 +6,7 @@ body {
   background: linear-gradient(135deg, #e8f4ff, #ffffff);
   color: #222;
   line-height: 1.7;
+  overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 section, header, .cleanup-box {
@@ -19,13 +18,9 @@ section, header, .cleanup-box {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-
-/* -------------------------
-   HERO + NAVBAR
--------------------------- */
+/* ------------------------- HERO + NAVBAR ------------------------- */
 .hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45),
-                                    rgba(0, 0, 0, 0.45)),
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
                     url('background_photos/campus5.jpg');
   background-size: cover;
   background-position: center;
@@ -48,29 +43,11 @@ section, header, .cleanup-box {
   cursor: pointer;
 }
 
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
+.logo-group { display: flex; align-items: center; gap: 15px; }
+.logo { width: 110px; }
+.logo-label { font-size: 1.3rem; font-weight: 700; color: white; line-height: 1.4rem; }
+.logo-label2 { font-size: 1.5rem; font-weight: 800; }
 
-.logo {
-  width: 110px;
-}
-
-.logo-label {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: white;
-  line-height: 1.4rem;
-}
-
-.logo-label2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-
-/* NAV */
 .nav-links {
   list-style: none;
   display: flex;
@@ -87,22 +64,9 @@ section, header, .cleanup-box {
   transition: background 0.25s ease, color 0.25s ease;
 }
 
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.33);
-}
-
-.contact-btn {
-  background-color: #014f6e;
-  padding: 10px 22px;
-  border-radius: 20px;
-  font-weight: 700;
-  transition: background 0.25s ease, box-shadow 0.25s ease;
-}
-
-.contact-btn:hover {
-  background: #026488;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
+.nav-links a:hover { background: rgba(255,255,255,0.33); }
+.contact-btn { background-color: #014f6e; padding: 10px 22px; border-radius: 20px; font-weight: 700; }
+.contact-btn:hover { background: #026488; box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
 
 /* HERO TITLE */
 .button-label {
@@ -117,10 +81,7 @@ section, header, .cleanup-box {
   text-shadow: 0 8px 25px rgba(0,0,0,0.55);
 }
 
-
-/* -------------------------
-   CLEANUP SECTION
--------------------------- */
+/* ------------------------- CLEANUP SECTION ------------------------- */
 .cleanup-section {
   display: flex;
   justify-content: center;
@@ -138,21 +99,11 @@ section, header, .cleanup-box {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cleanup-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
-}
+.cleanup-box:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.22); }
 
-h1, h2 {
-  color: #014f6e;
-  font-weight: 700;
-}
+h1, h2 { color: #014f6e; font-weight: 700; }
 
-
-
-/* -------------------------
-   FOOTER
--------------------------- */
+/* ------------------------- FOOTER ------------------------- */
 .bottom-section {
   display: flex;
   justify-content: center;
@@ -168,8 +119,8 @@ h1, h2 {
 }
 
 .bottom-box {
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 300px;
+  min-width: 280px;
   background: rgba(255,255,255,0.85);
   padding: 35px;
   border-radius: 18px;
@@ -179,28 +130,14 @@ h1, h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.bottom-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 38px rgba(0,0,0,0.24);
-}
+.bottom-box:hover { transform: translateY(-6px); box-shadow: 0 16px 38px rgba(0,0,0,0.24); }
+.bottom-box h2 { margin-bottom: 10px; color: #014f6e; }
 
-.bottom-box h2 {
-  margin-bottom: 10px;
-  color: #014f6e;
-}
-
-
-/* -------------------------
-   RESPONSIVE — TABLETS
--------------------------- */
+/* ------------------------- RESPONSIVE — TABLETS ------------------------- */
 @media (max-width: 900px) {
 
   /* NAVBAR */
-  .navbar {
-    padding: 20px;
-    position: relative;
-  }
-
+  .navbar { padding: 20px; position: relative; }
   .nav-links {
     display: none;
     position: absolute;
@@ -214,78 +151,35 @@ h1, h2 {
     gap: 18px;
     z-index: 99;
   }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-    color: white;
-    margin-left: auto;
-    font-size: 2.3rem;
-  }
+  .nav-links.active { display: flex; }
+  .hamburger { display: block; margin-left: auto; }
 
   /* HERO */
-  .hero-section {
-    height: 38vh;
-  }
-
+  .hero-section { height: 38vh; }
   .button-label {
     font-size: 3rem;
     position: static;
     margin-top: 50px;
+    transform: none;
   }
 
   /* CLEANUP SECTION */
-  .cleanup-section {
-    padding: 60px 15px;
-  }
-
-  .cleanup-box {
-    width: 100%;
-  }
+  .cleanup-section { padding: 60px 15px; }
+  .cleanup-box { width: 100%; padding: 25px; }
 
   /* FOOTER */
-  .bottom-container {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .bottom-box {
-    width: 100%;
-    padding: 25px;
-  }
+  .bottom-container { flex-direction: column; width: 100%; }
+  .bottom-box { width: 100%; padding: 25px; }
 }
 
-
-/* -------------------------
-   SMALL PHONES — 500px
--------------------------- */
+/* ------------------------- SMALL PHONES — 500px ------------------------- */
 @media (max-width: 500px) {
 
-  .button-label {
-    font-size: 2.2rem;
-  }
+  .button-label { font-size: 2.2rem; }
+  .logo { width: 85px; }
+  .logo-label { font-size: 1rem; line-height: 1.3rem; }
+  .logo-label2 { font-size: 1.1rem; }
 
-  .logo {
-    width: 85px;
-  }
-
-  .logo-label {
-    font-size: 1rem;
-    line-height: 1.3rem;
-  }
-
-  .logo-label2 {
-    font-size: 1.1rem;
-  }
-
-  h1, h2 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
+  h1, h2 { font-size: 1.2rem; }
+  p { font-size: 1rem; }
 }
