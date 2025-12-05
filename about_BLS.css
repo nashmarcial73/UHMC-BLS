@@ -1,310 +1,66 @@
-.hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('background_photos/campus2.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 50vh;
-  position: relative;
-  font-family: Poppins;
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  padding: 20px 50px;
-  gap: 20px;
-}
-
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-
-
-/* LOGO SECTION */
-
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo {
-  width: 110px;
-}
-
-.logo-label {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: white;
-  line-height: 1.4rem;
-}
-
-.logo-label2 {
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin-left: auto;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  padding: 8px 14px;
-  transition: 0.3s ease-in-out;
-  border-radius: 4px;
-}
-
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.contact-btn {
-  background: #014f6eff(76, 118, 255, 1);
-  background-color: #014f6eff;
-  padding: 10px 22px;
-  border-radius: 20px;
-  font-weight: 700;
-}
-
-.contact-btn:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-
-/* MAIN TITLE */
-
-.button-label {
-  position: absolute;      
-  top: 70%;                
-  left: 50%;               
-  transform: translate(-50%, -50%); 
-  color: white;
-  font-size: 6rem;
-  font-weight: 600;
-  text-align: center;
-}
-
-
-
-
-/* MISSION VISION STATEMENTS */
-
-.mission-section {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 400px 20px;
-  padding-bottom: 0px;
-  font-family: poppins;
-}
-
-.mission-container{
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 1100px;
-  gap: 10%
-}
-
-.mission-box {
-  width: 48%;
-  text-align: left;
-}
-
-
-.meet-title{
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 0px;
-  font-size: 35px;
-}
-
-
-/* INDIVIDUAL SECTION */
-
-.individual-section {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding-top: 0px;
-  padding-bottom: 100px;
-  font-family: poppins;
-}
-
-.individual-container{
-  display: flex;
-  justify-content: space-between;
-  gap: 60px;
-  width: 80%;
-  max-width: 1100px;
-}
-
-
-.individual-box {
-  width: 48%;
-  text-align: left;
-}
-
-
-
-/* IMAGES */
-
-.lindsey-individual{
-  width: 150px;
-  height: auto;
-  box-shadow: 10px 10px 5px #aaaaaa;
-}
-
-.yukai-individual{
-  width: 150px;
-  height: auto;
-  box-shadow: 10px 10px 5px #aaaaaa;
-}
-
-.jonas-individual{
-  width: 150px;
-  height: 170px;
-  box-shadow: 10px 10px 5px #aaaaaa;
-  object-fit: cover;
-  object-position: center;
-}
-
-
-/* FOOT NOTES */
-
-.bottom-section {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 0px 20px;
-  font-family: poppins;
-}
-
-.bottom-container {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  max-width: 1100px;
-  padding-bottom: 50px;
-}
-
-.bottom-box {
-  width: 48%;
-  text-align: left;
-}
-
-.bottom-box h2 {
-  margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* UPDATED */
-
-
-/* ========== GLOBAL PAGE STYLE ========== */
-body {
+/* ================= GLOBAL STYLES ================= */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e8f4ff, #ffffff);
-  color: #222;
-  line-height: 1.7;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
-/* Fade-in animation */
-section, header, .mission-box, .individual-box {
-  animation: fadeIn 0.8s ease forwards;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7fbff;
+  overflow-x: hidden;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* fade-in animation */
+section, header {
+  animation: fadeIn 0.7s ease forwards;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-
-/* ========== HERO SECTION ========== */
+/* ================= HERO / NAVBAR ================= */
 .hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                    url('background_photos/campus2.jpg');
-  background-size: cover;
+  height: 45vh;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+              url('background_photos/campus2.jpg');
   background-position: center;
-  height: 50vh;
+  background-size: cover;
   position: relative;
-  font-family: Poppins;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-
-/* ========== NAVBAR ========== */
 .navbar {
   display: flex;
   align-items: center;
-  padding: 20px 50px;
+  padding: 20px 40px;
   gap: 20px;
 }
 
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-
-/* LOGO GROUP */
 .logo-group {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 14px;
 }
 
 .logo {
-  width: 110px;
+  width: 95px;
 }
 
 .logo-label {
-  font-size: 1.3rem;
-  font-weight: 700;
   color: white;
-  line-height: 1.4rem;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .logo-label2 {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.4rem;
 }
 
-/* NAV LINKS */
 .nav-links {
   list-style: none;
   display: flex;
@@ -318,138 +74,180 @@ section, header, .mission-box, .individual-box {
   font-weight: 600;
   padding: 8px 14px;
   border-radius: 6px;
-  transition: 0.3s ease;
+
+  /* MATCH HOME PAGE */
+  transition: background 0.28s ease, color 0.28s ease, transform 0.28s ease;
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
 }
 
-/* CONTACT BUTTON */
 .contact-btn {
-  background-color: #014f6e;
+  background: #014f6e;
   padding: 10px 22px;
-  border-radius: 20px;
-  font-weight: 700;
-  transition: 0.3s ease;
+  border-radius: 22px;
 }
 
-.contact-btn:hover {
-  background: rgba(255,255,255,0.4);
-}
-
-
-/* ========== PAGE TITLE (About Us) ========== */
-.button-label {
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.hamburger {
+  display: none;
+  margin-left: auto;
+  font-size: 2.2rem;
   color: white;
-  font-size: 5rem;
-  font-weight: 700;
-  text-align: center;
-  text-shadow: 0 8px 25px rgba(0,0,0,0.55);
+  cursor: pointer;
 }
 
+/* ---------- PAGE TITLE ---------- */
+.page-title {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 4.2rem;
+  font-weight: 700;
+  text-shadow: 0 7px 25px rgba(0,0,0,0.45);
+}
 
-
-/* ============================
-   MISSION & VISION SECTION
-   ============================ */
+/* ================= MISSION / VISION ================= */
 .mission-section {
+  padding: 120px 20px 40px;
   display: flex;
   justify-content: center;
-  padding: 160px 20px 60px;
 }
 
 .mission-container {
   display: flex;
-  justify-content: space-between;
+  gap: 40px;
   width: 85%;
   max-width: 1200px;
-  gap: 40px;
 }
 
-/* GLASS BOXES */
 .mission-box {
   flex: 1;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   padding: 40px;
-  border-radius: 22px
+  border-radius: 22px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  backdrop-filter: blur(5px);
+
+  /* MATCH HOME PAGE hover */
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
+.mission-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.17);
+}
 
+.mission-box h2 {
+  color: #014f6e;
+  margin-bottom: 15px;
+}
 
-.bottom-container {
+/* ================= TEAM SECTION ================= */
+.meet-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.meet-section h1 {
+  font-size: 2.6rem;
+  margin-bottom: 40px;
+}
+
+.team-container {
   display: flex;
+  justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
   width: 85%;
-  max-width: 1100px;
+  margin: auto;
+  max-width: 1200px;
 }
 
-.bottom-box {
+.team-box {
+  width: 31%;
+  min-width: 300px;
+  background: rgba(255,255,255,0.95);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+
+  /* MATCH HOME PAGE hover */
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.team-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.16);
+}
+
+.profile-img {
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  box-shadow: 6px 6px 14px rgba(0,0,0,0.15);
+
+  /* subtle hover effect */
+  transition: transform 0.28s ease;
+}
+
+.team-box:hover .profile-img {
+  transform: scale(1.03);
+}
+
+/* ================= FOOTER ================= */
+.footer-section {
+  padding: 40px 0 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-container {
+  width: 85%;
+  max-width: 1100px;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-box {
   flex: 1;
   min-width: 300px;
-  text-align: left;
-
-  /* glass cards match style */
-  background: rgba(255,255,255,0.85);
-  padding: 35px;
+  background: rgba(255,255,255,0.9);
+  padding: 30px;
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  backdrop-filter: blur(6px);
-  transition: 0.3s ease;
+
+  /* hover match */
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
-.bottom-box:hover {
+.footer-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 38px rgba(0,0,0,0.24);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
 }
 
-.bottom-box h2 {
-  margin-bottom: 10px;
-  color: #014f6e;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========== MOBILE RESPONSIVE DESIGN ========== */
+/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 900px) {
 
-  /* NAVBAR */
-  .navbar {
-    padding: 20px;
-    position: relative;
-  }
-
   .nav-links {
-    display: none;
     position: absolute;
-    top: 70px;
+    top: 75px;
     right: 20px;
     width: 220px;
+    background: rgba(0,0,0,0.92);
+    display: none;
     flex-direction: column;
-    background: rgba(0,0,0,0.85);
+    text-align: right;
     padding: 20px;
     border-radius: 14px;
-    gap: 18px;
-    text-align: right;
-    z-index: 99;
+    gap: 15px;
+    z-index: 100;
   }
 
   .nav-links.active {
@@ -458,105 +256,28 @@ section, header, .mission-box, .individual-box {
 
   .hamburger {
     display: block;
-    margin-left: auto;
-    font-size: 2.2rem;
   }
 
-  /* HERO TITLE */
-  .button-label {
-    position: static;
-    margin-top: 70px;
+  .page-title {
     font-size: 2.8rem;
-    text-align: center;
-  }
-
-  .hero-section {
-    height: 38vh;
-    padding: 20px;
-  }
-
-  /* MISSION SECTION */
-  .mission-section {
-    padding: 60px 20px;
+    bottom: 20px;
   }
 
   .mission-container {
     flex-direction: column;
+  }
+
+  .team-box {
     width: 100%;
-    gap: 25px;
   }
 
-  .mission-box {
-    width: 100%;
-    padding: 25px;
-    text-align: left;
-  }
-
-  /* MEET THE TEAM TITLE */
-  .meet-title {
-    font-size: 28px;
-    padding-top: 40px;
-  }
-
-  /* INDIVIDUAL SECTION */
-  .individual-container {
-    flex-direction: column;
-    width: 100%;
-    gap: 40px;
-    padding: 0 20px;
-  }
-
-  .individual-box {
-    width: 100%;
-    padding: 25px;
-    background: rgba(255,255,255,0.9);
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-  }
-
-  .individual-box img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 15px;
-    display: block;
-  }
-
-  /* FOOTER SECTION */
-  .bottom-section {
-    padding: 0 20px 40px;
-  }
-
-  .bottom-container {
-    flex-direction: column;
-    width: 100%;
-    gap: 30px;
-  }
-
-  .bottom-box {
-    width: 100%;
-    padding: 25px;
+  .team-box:hover {
+    transform: none; /* prevent weird jump on mobile tap */
   }
 }
 
-/* ========== SMALLER PHONES ========== */
 @media (max-width: 500px) {
-  .button-label {
+  .page-title {
     font-size: 2.2rem;
-  }
-
-  .logo {
-    width: 85px;
-  }
-
-  .logo-label {
-    font-size: 1rem;
-  }
-
-  .logo-label2 {
-    font-size: 1.1rem;
-  }
-
-  .individual-box img {
-    width: 130px;
   }
 }

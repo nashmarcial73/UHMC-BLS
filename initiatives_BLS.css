@@ -1,11 +1,37 @@
+/* -------------------------
+   GLOBAL BASE
+-------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8f4ff, #ffffff);
+  color: #222;
+  line-height: 1.7;
+}
+
+section, header, .cleanup-box {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* -------------------------
+   HERO + NAVBAR
+-------------------------- */
 .hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('background_photos/campus5.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45),
+                                    rgba(0, 0, 0, 0.45)),
+                    url('background_photos/campus5.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 50vh;
   position: relative;
-  font-family: Poppins;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .navbar {
@@ -21,7 +47,6 @@
   color: white;
   cursor: pointer;
 }
-
 
 .logo-group {
   display: flex;
@@ -45,10 +70,7 @@
   font-weight: 800;
 }
 
-
-
-/* NAV BAR */
-
+/* NAV */
 .nav-links {
   list-style: none;
   display: flex;
@@ -61,177 +83,135 @@
   color: white;
   font-weight: 600;
   padding: 8px 14px;
-  transition: 0.3s ease-in-out;
-  border-radius: 4px;
+  border-radius: 6px;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 .nav-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.33);
 }
 
 .contact-btn {
-  background: #014f6eff(76, 118, 255, 1);
-  background-color: #014f6eff;
+  background-color: #014f6e;
   padding: 10px 22px;
   border-radius: 20px;
   font-weight: 700;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .contact-btn:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: #026488;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-
-
-/* MAIN TITLE */
-
+/* HERO TITLE */
 .button-label {
-  position: absolute;      
-  top: 70%;                
-  left: 50%;               
-  transform: translate(-50%, -50%); 
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-size: 5rem;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
+  text-shadow: 0 8px 25px rgba(0,0,0,0.55);
 }
 
 
-
-
-/* FOOT NOTES */
-
-.bottom-section {
+/* -------------------------
+   CLEANUP SECTION
+-------------------------- */
+.cleanup-section {
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 0px 20px;
-  font-family: poppins;
+  padding: 100px 20px;
 }
 
-.bottom-container {
-  display: flex;
-  justify-content: space-between;
+.cleanup-box {
   width: 80%;
   max-width: 1100px;
-  padding-bottom: 50px;
-}
-
-.bottom-box {
-  width: 48%;
-  text-align: left;
-}
-
-.bottom-box h2 {
-  margin-bottom: 10px;
-}
-
-
-
-
-
-
-
-/* GLOBAL PAGE STYLE */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e8f4ff, #ffffff);
-  color: #222;
-  line-height: 1.7;
-}
-
-/* UNIVERSAL SECTION STYLING */
-section {
-  padding: 80px 0;
-  display: flex;
-  justify-content: center;
-}
-
-/* MAIN CONTENT CONTAINER (nice shadow + rounded edges) */
-.cleanup-box,
-.bottom-box {
-  background: rgba(255, 255, 255, 0.85); /* glass effect */
-  backdrop-filter: blur(6px);
-  border-radius: 18px;
+  background: rgba(255,255,255,0.85);
   padding: 40px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
-  max-width: 1100px;
-  animation: fadeIn 0.8s ease-in-out forwards;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* HOVER ELEVATION EFFECT */
-.cleanup-box:hover,
-.bottom-box:hover {
+.cleanup-box:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.22);
 }
 
-/* HEADINGS */
 h1, h2 {
   color: #014f6e;
   font-weight: 700;
-  margin-bottom: 15px;
-  letter-spacing: 0.5px;
 }
 
-p {
-  font-size: 1.05rem;
-  color: #333;
+
+
+/* -------------------------
+   FOOTER
+-------------------------- */
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
-/* BOTTOM FOOTER BOXES */
 .bottom-container {
   display: flex;
   gap: 40px;
   flex-wrap: wrap;
   width: 85%;
+  max-width: 1100px;
 }
 
-/* FOOTER CARD STYLE */
 .bottom-box {
   flex: 1;
   min-width: 300px;
+  background: rgba(255,255,255,0.85);
+  padding: 35px;
+  border-radius: 18px;
   text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* FADE-IN ANIMATION */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(25px); }
-  to   { opacity: 1; transform: translateY(0); }
+.bottom-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 38px rgba(0,0,0,0.24);
+}
+
+.bottom-box h2 {
+  margin-bottom: 10px;
+  color: #014f6e;
 }
 
 
-
-
-
-
-
-/* ============================
-   MOBILE RESPONSIVE DESIGN
-   ============================ */
+/* -------------------------
+   RESPONSIVE — TABLETS
+-------------------------- */
 @media (max-width: 900px) {
 
   /* NAVBAR */
   .navbar {
-    padding: 15px 20px;
+    padding: 20px;
     position: relative;
   }
 
   .nav-links {
     display: none;
     position: absolute;
-    top: 65px;
+    top: 70px;
     right: 20px;
-    width: 220px;
+    width: 230px;
     flex-direction: column;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.88);
     padding: 20px;
     border-radius: 14px;
     gap: 18px;
-    text-align: right;
     z-index: 99;
   }
 
@@ -239,49 +219,36 @@ p {
     display: flex;
   }
 
-  .nav-links a {
-    padding: 10px 0;
-  }
-
   .hamburger {
     display: block;
-    font-size: 2.3rem;
     color: white;
     margin-left: auto;
-    cursor: pointer;
+    font-size: 2.3rem;
   }
 
-  /* HERO TITLE */
-  .button-label {
-    position: static;
-    margin-top: 40px;
-    text-align: center;
-    font-size: 2.5rem;
-  }
-
+  /* HERO */
   .hero-section {
-    height: 35vh;
-    padding: 20px;
+    height: 38vh;
+  }
+
+  .button-label {
+    font-size: 3rem;
+    position: static;
+    margin-top: 50px;
   }
 
   /* CLEANUP SECTION */
   .cleanup-section {
-    padding: 50px 15px;
+    padding: 60px 15px;
   }
 
   .cleanup-box {
     width: 100%;
-    padding: 25px;
   }
 
   /* FOOTER */
-  .bottom-section {
-    padding: 40px 15px;
-  }
-
   .bottom-container {
     flex-direction: column;
-    gap: 25px;
     width: 100%;
   }
 
@@ -291,13 +258,14 @@ p {
   }
 }
 
-/* ============================
-   SMALL PHONES (max-width 500px)
-   ============================ */
+
+/* -------------------------
+   SMALL PHONES — 500px
+-------------------------- */
 @media (max-width: 500px) {
 
   .button-label {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .logo {
